@@ -34,7 +34,9 @@ elif ROS_VERSION == 2:
         license='MIT',
         tests_require=['pytest'],
         entry_points={
-            'console_scripts': ['carla_manual_control = carla_manual_control.carla_manual_control:main'],
+            'console_scripts': ['carla_manual_control = carla_manual_control.carla_manual_control:main',
+                                'carla_manual_control_steeringwheel = carla_manual_control.carla_manual_control_steeringwheel:main',
+            ],
         },
         package_dir={'': 'src'},
     )
