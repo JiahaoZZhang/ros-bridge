@@ -46,6 +46,7 @@ if(${ROS_VERSION} EQUAL 1)
 elseif(${ROS_VERSION} EQUAL 2)
 
   find_package(ament_cmake REQUIRED)
+  find_package(tf2_geometry_msgs REQUIRED)
   find_package(rviz_common REQUIRED)
   find_package(carla_msgs REQUIRED)
   find_package(nav_msgs COMPONENTS)
@@ -74,7 +75,7 @@ elseif(${ROS_VERSION} EQUAL 2)
                                            plugin_description_ros2.xml)
 
   ament_target_dependencies(rviz_carla_plugin rclcpp carla_msgs nav_msgs
-                            carla_ros_scenario_runner_types rviz_common)
+                            carla_ros_scenario_runner_types rviz_common tf2_geometry_msgs)
 
   ament_export_libraries(${PROJECT_NAME})
 

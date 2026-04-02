@@ -122,7 +122,7 @@ def generate_launch_description():
             output='screen',
             remappings=[
                 (
-                    "carla/ego_vehicle/spectator_pose",
+                    "/carla/ego_vehicle/spectator_pose",
                     "/carla/ego_vehicle/rgb_view/control/set_transform"
                 )
             ],
